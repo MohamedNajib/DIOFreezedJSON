@@ -46,7 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
             }, failure: (networkError) {
               print('>>>> ${networkError.localizedErrorMessage}');
               return Center(
-                  child: Text(networkError.localizedErrorMessage ?? 'ERROR',
+                  child: Text(
+                      networkError.localizedErrorMessage ?? 'Error message',
                       textAlign: TextAlign.center));
             })
           : const Center(child: CircularProgressIndicator()),
